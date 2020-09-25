@@ -21,13 +21,13 @@ Falling Ball is a game where the player has stop the ball from left to right in 
 
 ## Data Structure
 
-# main.js
+### main.js
 
 - buildSplashScreen () {}
 - buildGameScreen () {}
 - buildGameOverScreen () {}
 
-# game.js
+### game.js
 
 - Game () {}
 - starLoop () {}
@@ -38,7 +38,7 @@ Falling Ball is a game where the player has stop the ball from left to right in 
 - drawCanvas () {}
 - GameOver () {}
 
-# ball.js 
+### ball.js 
 
 - ball () {
     this.x;
@@ -51,7 +51,7 @@ Falling Ball is a game where the player has stop the ball from left to right in 
 - checkTileCollision () {}
 - checkScreenCollision () {}
 
-# tiles.js 
+### tiles.js 
 
 - tiles () {
     this.x;
@@ -61,7 +61,6 @@ Falling Ball is a game where the player has stop the ball from left to right in 
 - draw () {}
 
 ## States y States Transitions
-Definition of the different states and their transition (transition functions)
 
 - splashScreen
 - gameScreen

@@ -30,7 +30,9 @@ Falling Ball is a game where the player has stop the ball from left to right in 
 - Game () {}
 - starLoop () {}
 - checkCollisions () {}
+- addBall() {}
 - addTiles () {}
+- addClock () {}
 - clearCanvas () {}
 - updateCanvas () {}
 - drawCanvas () {}
@@ -86,11 +88,13 @@ Falling Ball is a game where the player has stop the ball from left to right in 
 - game - buildCanvas
 - game - updateCanvas
 - game - drawCanvas
+- game - addBall
 - ball - draw
 - ball - move
-- game - addBall
 - tiles - draw
+- clock - startCounter
 - game - addTiles
+- game - addClock
 - game - checkCollision
 - game - GameOver
 - game - addEventListener

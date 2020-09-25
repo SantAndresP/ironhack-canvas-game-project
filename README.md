@@ -58,6 +58,17 @@ Falling Ball is a game where the player has stop the ball from left to right in 
 }
 - draw () {}
 
+### clock.js
+- clock () {
+    this.x;
+    this.y;
+    this.counter;
+}
+
+- draw () {}
+- startCounter () {}
+- stopCounter () {}
+
 ## States y States Transitions
 
 - splashScreen

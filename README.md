@@ -4,7 +4,7 @@
 
 Falling Ball is a game where the player has stop the ball from left to right in order to stop it from reaching the top of the screen, once this happens the game will end. The longer the player manages to do this, the higher the will be score.
 
-## MVP (DOM - CANVAS)
+## Minimum Viable Product
 
 - Game has a 300x600px screen.
 - Game has a seconds timer.
@@ -89,11 +89,11 @@ Falling Ball is a game where the player has stop the ball from left to right in 
 ### Trello
 [Link url](https://trello.com/b/h4hj6kRy)
 
-### Git
+### Repository and deploy
 URls for the project repo and deploy
 [Link Repo](https://github.com/SantAndresP/ironhack-canvas-game-project)
 [Link Deploy]()
 
-### Slides
-URls for the project presentation (slides)
+### Presentation slides
+URL for the project presentation
 [Link Slides.com]()

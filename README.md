@@ -6,18 +6,16 @@ Falling Ball is a game where the player has stop the ball from left to right in 
 
 ## MVP (DOM - CANVAS)
 
-- The game has a 300x600px screen.
-- ship shoots cannonballs up
-- tentacles appear randomly from the top of the screen
-- four tentacles stacking will end the game
-- cannonballs destroy tentacles
-- reload time for shooting cannonballs
-- Increasing dificulty
+- Game has a 300x600px screen.
+- Game has a seconds timer.
+- The tiles move automatically upwards.
+- Tiles appear from the bottom of the screen.
+- Allowing the ball to reach the top of the screen will end the game.
 
 ## Backlog
 
 - Add diagonal tiles.
-- Ability to start the game on increased dificulty lvl
+- Increase speed of the upwards motion of the tiles as the game progresses.
 
 ## Data Structure
 
@@ -32,7 +30,7 @@ Falling Ball is a game where the player has stop the ball from left to right in 
 - Game () {}
 - starLoop () {}
 - checkCollisions () {}
-- addTentacle () {}
+- addTiles () {}
 - clearCanvas () {}
 - updateCanvas () {}
 - drawCanvas () {}

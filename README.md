@@ -10,11 +10,13 @@ Falling Ball is a game where the player has stop the ball from left to right in 
 - Game has a seconds timer.
 - The tiles move automatically upwards.
 - Tiles appear from the bottom of the screen.
+- Ball can move left and move right.
 - Allowing the ball to reach the top of the screen will end the game.
 
 ## Backlog
 
 - Add diagonal tiles.
+- Add jumping mechanic for the ball.
 - Increase speed of the upwards motion of the tiles as the game progresses.
 
 ## Data Structure

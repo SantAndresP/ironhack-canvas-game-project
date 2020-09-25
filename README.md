@@ -2,7 +2,7 @@
 
 ## Description
 
-Falling Ball is a game where the player has to move the ball from left to right in order to stop it from reaching the top of the screen, once this happens the game will end. The longer the player manages to do this, the higher the score will be.
+Falling Ball is a game where the player has to move the ball from left to right in order to stop it from reaching the top of the screen, once this happens the game will end. The longer the player manages to keep the ball away from the ceiling, the higher the score will be.
 
 ## Minimum Viable Product
 

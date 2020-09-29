@@ -104,8 +104,8 @@ document.addEventListener("keydown", (event) => {
 const score = document.querySelector("#score");
 const scoreboard = document.querySelector("#scoreboard");
 
-const difficulty = 750;
-const ball = new Ball(15, 50, 10, "#7df9ff");
+const difficulty = 975;
+const ball = new Ball(150, 50, 9, "#7df9ff");
 
 const yTile = canvas.height + 50;
 const initialTile = new Tile(0, yTile, canvas.width, 5, "#39ff14");
@@ -119,7 +119,7 @@ let j = 0;
 function startGame() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Tile generator.
+  // Tile generator
   for (let i = 0; i < tiles.length; i++) {
     tiles[i].draw();
     tiles[i].gap.draw();
@@ -127,7 +127,7 @@ function startGame() {
     tiles[i].gap.y--;
 
     if (tiles[i].y == difficulty) {
-      const tile = new Tile(-10, yTile, canvas.width, 5, "#39ff14");
+      const tile = new Tile(0, yTile, canvas.width, 5, "#39ff14");
       const gap = new Gap(tile.y, 40, 10);
       tile.addGap(gap);
       tiles.push(tile);
@@ -146,15 +146,13 @@ function startGame() {
     if (j > tiles.length - 1) {
       ball.y++;
     } else {
-      console.log("Here");
-
       if (
         ball.x > tiles[j].gap.x &&
         ball.x < tiles[j].gap.x + tiles[j].gap.width &&
         ball.y === tiles[j].gap.y
       ) {
         j++;
-        // ball.y++;
+        ball.y++;
         score.innerText = j;
       } else if (
         ball.y < tiles[j].y - ball.radius &&
@@ -162,29 +160,20 @@ function startGame() {
       ) {
         ball.y++;
       }
-
-      console.log(ball.y);
-      // console.log("Gap Y ", tiles[j].y);
       if (ball.y === tiles[j]?.y) {
         ball.y--;
       }
     }
   }
 
-  // Difficulty adjusment
-
   // Losing condition
   if (ball.y === 0) {
     clearInterval(gameInterval);
     canvas.style.display = "none";
-
     location.reload();
   }
 
   ball.draw();
-
-  console.log("j:", j);
-  console.log("Tiles length:", tiles.length - 1);
 }
 
 /* Main interval function */

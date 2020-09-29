@@ -11,4 +11,24 @@ body {
 
 canvas {
   margin-top: 25px;
+  display: none;
+}
+
+button {
+  margin-top: 300px;
+  width: 200px;
+  height: 50px;
+  border-radius: 12px;
+  font-family: monospace;
+  color: #7df9ff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#score {
+  color: #7df9ff;
+  font-family: monospace;
+  font-size: 20px;
 }

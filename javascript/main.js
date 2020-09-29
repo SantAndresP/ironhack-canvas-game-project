@@ -1,10 +1,18 @@
-/* Enviroment initialisation. */
+/* Enviroment initialisation */
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 const background = (canvas.style.background = "Black");
-canvas.style.border = "1px solid Black";
 
-/* Ball. */
+/* Start Button */
+let gameStarted = false;
+const startBtn = document.querySelector("#startBtn");
+startBtn.addEventListener("click", () => {
+  startBtn.style.display = "none";
+  canvas.style.display = "flex";
+  gameStarted = true;
+});
+
+/* Ball */
 class Ball {
   constructor(x, y, radius, color) {
     this.x = x;
@@ -19,6 +27,9 @@ class Ball {
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
     ctx.fill();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#ff00ff";
+    ctx.stroke();
     ctx.closePath();
   }
 
@@ -35,7 +46,7 @@ class Ball {
   }
 }
 
-/* Tile. */
+/* Tile */
 class Tile {
   constructor(x, y, width, height, color) {
     this.width = width;
@@ -57,7 +68,7 @@ class Tile {
   }
 }
 
-/* Gap. */
+/* Gap */
 class Gap {
   constructor(y, width, height) {
     this.width = width;
@@ -75,7 +86,7 @@ class Gap {
   }
 }
 
-/* Ball direction detector. */
+/* Ball direction detector */
 let rightArrow = false;
 let leftArrow = false;
 
@@ -89,16 +100,22 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-/* Game assets. */
-const ball = new Ball(12, 100, 10, "#FF00FF");
-const yTile = canvas.height - 18;
-const initialTile = new Tile(0, yTile, canvas.width, 10, "#39ff14");
+/* Game assets */
+const score = document.querySelector("#score");
+const scoreboard = document.querySelector("#scoreboard");
+
+const difficulty = 750;
+const ball = new Ball(15, 50, 10, "#7df9ff");
+
+const yTile = canvas.height + 50;
+const initialTile = new Tile(0, yTile, canvas.width, 5, "#39ff14");
 const gap = new Gap(initialTile.y, 40, 10);
+
 const tiles = [initialTile];
 tiles[0].addGap(gap);
 let j = 0;
 
-/* Main game function. */
+/* Main game function */
 function startGame() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -109,49 +126,70 @@ function startGame() {
     tiles[i].y--;
     tiles[i].gap.y--;
 
-    if (tiles[i].y == 500) {
-      const tile = new Tile(0, yTile, canvas.width, 10, "#39FF14");
+    if (tiles[i].y == difficulty) {
+      const tile = new Tile(-10, yTile, canvas.width, 5, "#39ff14");
       const gap = new Gap(tile.y, 40, 10);
       tile.addGap(gap);
       tiles.push(tile);
     }
   }
 
-  // Ball movement.
+  // Ball movement
   if (rightArrow && ball.x + ball.radius < canvas.width) {
     ball.moveRight();
   } else if (leftArrow && ball.x > 0) {
     ball.moveLeft();
   }
 
-  // Collision logic.
-  if (
-    ball.x > tiles[j].gap.x &&
-    ball.x < tiles[j].gap.x + tiles[j].gap.width &&
-    ball.y === tiles[j].gap.y
-  ) {
-    j += 1;
-    ball.y += 1;
-  } else if (ball.y === tiles[j].y) {
-    ball.y -= 1;
+  // Collision logic
+  if (ball.y <= canvas.height - ball.radius - 1) {
+    if (j > tiles.length - 1) {
+      ball.y++;
+    } else {
+      console.log("Here");
+
+      if (
+        ball.x > tiles[j].gap.x &&
+        ball.x < tiles[j].gap.x + tiles[j].gap.width &&
+        ball.y === tiles[j].gap.y
+      ) {
+        j++;
+        // ball.y++;
+        score.innerText = j;
+      } else if (
+        ball.y < tiles[j].y - ball.radius &&
+        ball.y <= canvas.height - ball.radius
+      ) {
+        ball.y++;
+      }
+
+      console.log(ball.y);
+      // console.log("Gap Y ", tiles[j].y);
+      if (ball.y === tiles[j]?.y) {
+        ball.y--;
+      }
+    }
   }
 
-  if (ball.y < tiles[j].y - ball.radius) {
-    ball.y += 1;
-  }
+  // Difficulty adjusment
 
-  // Losing condition.
+  // Losing condition
   if (ball.y === 0) {
     clearInterval(gameInterval);
-    alert("GAME OVER");
+    canvas.style.display = "none";
+
     location.reload();
   }
 
   ball.draw();
-  console.log(j);
+
+  console.log("j:", j);
+  console.log("Tiles length:", tiles.length - 1);
 }
 
-/* Main interval function. */
+/* Main interval function */
 const gameInterval = setInterval(() => {
-  requestAnimationFrame(startGame);
+  if (gameStarted) {
+    requestAnimationFrame(startGame);
+  }
 }, 1);

@@ -10,8 +10,10 @@
 
   <body>
     <!-- Scoreboard -->
-    <p id="score">0</p>
-    <ol id="scoreboard"></ol>
+    <section id="scoreboard">
+      <p id="currentScore">0</p>
+      <ol id="scoresList"></ol>
+    </section>
 
     <!-- Start Button -->
     <button id="startBtn">R U N</button>
@@ -19,8 +21,10 @@
     <!-- Game -->
     <canvas id="gameCanvas" width="300" height="1000"></canvas>
 
-    <!-- Script -->
-    <script srx="javascript/ball.js"></script>
+    <!-- Scripts -->
+    <script src="javascript/ball.js"></script>
+    <script src="javascript/tile.js"></script>
+    <script src="javascript/gap.js"></script>
     <script src="javascript/main.js"></script>
   </body>
 </html>

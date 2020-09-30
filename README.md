@@ -1,105 +1,40 @@
-# IronHack Project | Canvas Game (Falling Ball)
+# IronHack Project | Canvas Game
+# R U N
+
 
 ## Description
+R U N is a game where the player has to move a ball from left to right in order to stop it from reaching the top of the screen, once this happens the game will end. The longer the player manages to keep the ball away from the ceiling, the higher the score will be.
 
-Falling Ball is a game where the player has to move the ball from left to right in order to stop it from reaching the top of the screen, once this happens the game will end. The longer the player manages to keep the ball away from the ceiling, the higher the score will be.
-
-## Minimum Viable Product
-
-- Game has a 300x600px screen.
-- Game has a seconds timer.
-- The tiles move automatically upwards.
-- Tiles appear from the bottom of the screen.
-- Ball can move left and move right.
-- Allowing the ball to reach the top of the screen will end the game.
 
 ## Backlog
-
 - Add diagonal tiles.
 - Add jumping mechanic for the ball.
 - Increase speed of the upwards motion of the tiles as the game progresses.
 
+
 ## Data Structure
 
 ### main.js
-
-- buildSplashScreen () {}
-- buildGameScreen () {}
-- buildGameOverScreen () {}
-
-### game.js
-
-- Game () {}
-- starLoop () {}
-- checkCollisions () {}
-- addBall() {}
-- addTiles () {}
-- addClock () {}
-- clearCanvas () {}
-- updateCanvas () {}
-- drawCanvas () {}
-- GameOver () {}
+- startGame() {}
+- gameInterval = setInterval() {}
 
 ### ball.js 
-
-- ball () {
-    this.x;
-    this.y;
-    this.direction;
-}
-
-- draw () {}
-- move () {}
-- checkTileCollision () {}
-- checkScreenCollision () {}
+- constructor
+- draw() {}
 
 ### tiles.js 
+- constructor
+- draw() {}
 
-- tiles () {
-    this.x;
-    this.y;
-    this.size
-}
-- draw () {}
+### gap.js
+- constructor
+- draw() {}
 
-### clock.js
-- clock () {
-    this.x;
-    this.y;
-    this.counter;
-}
-
-- draw () {}
-- startCounter () {}
-- stopCounter () {}
 
 ## States y States Transitions
+- Title Screen
+- Game Screen
 
-- splashScreen
-- gameScreen
-- gameOverScreen
-
-## Task
-
-- main - buildDom
-- main - buildSplashScreen
-- main - addEventListener
-- main - buildGameScreen
-- main - buildGameOverScreen
-- game - startLoop
-- game - buildCanvas
-- game - updateCanvas
-- game - drawCanvas
-- game - addBall
-- ball - draw
-- ball - move
-- tiles - draw
-- clock - startCounter
-- game - addTiles
-- game - addClock
-- game - checkCollision
-- game - GameOver
-- game - addEventListener
 
 ## Links
 

@@ -4,7 +4,7 @@ const ctx = canvas.getContext("2d");
 const background = (canvas.style.background = "Black");
 
 /* Assets Initialisation */
-const difficulty = 950;
+const difficulty = 975;
 const yTile = canvas.height + 50;
 
 const ball = new Ball(Math.floor(canvas.width / 2), 50, 10, "#7df9ff");
@@ -15,7 +15,7 @@ const tiles = [initialTile];
 tiles[0].addGap(initialGap);
 let j = 0; // Current Tile Index
 
-/* Scoreboard */
+/* Score */
 const currentScore = document.querySelector("#currentScore");
 
 /* Start Button */
@@ -26,7 +26,7 @@ startBtn.addEventListener("click", () => {
   startBtn.style.display = "none";
   currentScore.style.display = "flex";
   canvas.style.display = "flex";
-  songs[randomSong].play();
+  currentSong.play();
   gameStarted = true;
 });
 

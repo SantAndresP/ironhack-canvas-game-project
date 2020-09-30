@@ -23,6 +23,6 @@ function detectCollision() {
       }
     }
   } else {
-    gameOver();
+    youWentTooFar();
   }
 }

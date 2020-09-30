@@ -1,3 +1,4 @@
+/* General */
 * {
   margin: 0;
   padding: 0;
@@ -15,14 +16,15 @@ canvas {
   margin-left: 100px;
 }
 
-button {
+/* Game */
+#startBtn {
   margin-top: 250px;
-  width: 300px;
+  width: 350px;
   height: 100px;
   border-radius: 12px;
   font-family: monospace;
   color: #7df9ff;
-  font-size: 50px;
+  font-size: 48px;
   font-weight: 900;
   display: flex;
   justify-content: center;
@@ -35,4 +37,42 @@ button {
   font-size: 50px;
   display: none;
   margin-top: 100px;
+}
+
+#scoresList {
+  color: #7df9ff;
+  font-family: monospace;
+  font-size: 10px;
+  display: none;
+  margin-top: 30px;
+}
+
+/* End Screen */
+#endScreen {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#endScreen p {
+  margin-top: 100px;
+  color: #7df9ff;
+  font-size: 100px;
+  font-weight: 900;
+  font-family: monospace;
+}
+
+#reloadBtn {
+  margin-top: 250px;
+  width: 350px;
+  height: 100px;
+  border-radius: 12px;
+  font-family: monospace;
+  font-size: 48px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  color: #7df9ff;
+  align-items: center;
 }

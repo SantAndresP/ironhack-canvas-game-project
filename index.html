@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>R U N</title>
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="styles/images/favicon.ico" />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
-    <!-- Scoreboard -->
-    <section id="scoreboard">
-      <p id="currentScore">0</p>
-      <ol id="scoresList"></ol>
-    </section>
+    <!-- Score -->
+    <p id="currentScore">0</p>
 
     <!-- Start Button -->
     <button id="startBtn">R U N</button>
@@ -21,10 +22,19 @@
     <!-- Game -->
     <canvas id="gameCanvas" width="300" height="1000"></canvas>
 
+    <!-- End Screen -->
+    <div id="endScreen">
+      <button id="reloadBtn">R E L O A D</button>
+      <p id="finalScore"></p>
+    </div>
+
     <!-- Scripts -->
-    <script src="javascript/ball.js"></script>
-    <script src="javascript/tile.js"></script>
-    <script src="javascript/gap.js"></script>
+    <script src="javascript/assets.js"></script>
+    <script src="javascript/audio.js"></script>
+    <script src="javascript/tileGenerator.js"></script>
+    <script src="javascript/moveBall.js"></script>
+    <script src="javascript/detectCollision.js"></script>
+    <script src="javascript/gameOver.js"></script>
     <script src="javascript/main.js"></script>
   </body>
 </html>

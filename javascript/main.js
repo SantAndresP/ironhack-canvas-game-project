@@ -3,6 +3,24 @@ const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 const background = (canvas.style.background = "Black");
 
+/* Game Assets */
+const afraidToFall = new Audio("styles/sounds/Afraid_to_Fall.mp3");
+const runningOne = new Audio("styles/sounds/Running_One.mp3");
+
+const songs = [afraidToFall, runningOne];
+const randomSong = Math.floor(Math.random() * songs.length);
+
+const difficulty = 975;
+const ball = new Ball(Math.floor(canvas.width / 2), 50, 10, "#7df9ff");
+
+const yTile = canvas.height + 50;
+const initialTile = new Tile(0, yTile, canvas.width, 5, "#39ff14");
+const initialGap = new Gap(initialTile.y, 40, 10);
+
+const tiles = [initialTile];
+tiles[0].addGap(initialGap);
+let j = 0; // Current Tile Index
+
 /* Start Button */
 let gameStarted = false;
 const currentScore = document.querySelector("#currentScore");
@@ -13,6 +31,7 @@ startBtn.addEventListener("click", () => {
   startBtn.style.display = "none";
   currentScore.style.display = "flex";
   canvas.style.display = "flex";
+  songs[randomSong].play();
   gameStarted = true;
 });
 
@@ -29,20 +48,6 @@ document.addEventListener("keydown", (event) => {
     leftArrow = true;
   }
 });
-
-/* Game Assets */
-const difficulty = 975;
-const ball = new Ball(Math.floor(canvas.width / 2), 50, 10, "#7df9ff");
-
-const yTile = canvas.height + 50;
-const initialTile = new Tile(0, yTile, canvas.width, 5, "#39ff14");
-const initialGap = new Gap(initialTile.y, 40, 10);
-
-const tiles = [initialTile];
-tiles[0].addGap(initialGap);
-
-// Current Tile Index
-let j = 0;
 
 /* Main Game Function */
 function startGame() {

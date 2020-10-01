@@ -13,7 +13,6 @@ body {
 canvas {
   margin-top: 25px;
   display: none;
-  margin-left: 100px;
 }
 
 /* Game */
@@ -32,11 +31,13 @@ canvas {
 }
 
 #currentScore {
+  position: absolute;
+  top: 1px;
+  left: 1px;
   color: #7df9ff;
   font-family: monospace;
   font-size: 50px;
   display: none;
-  margin-top: 100px;
 }
 
 #scoresList {
@@ -75,4 +76,12 @@ canvas {
   justify-content: center;
   color: #7df9ff;
   align-items: center;
+}
+
+@media only screen and (max-width: 450px) {
+  #currentScore {
+    left: 1px;
+    top: 1px;
+    font-size: 25px;
+  }
 }

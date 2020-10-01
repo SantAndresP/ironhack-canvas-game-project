@@ -1,5 +1,7 @@
 # IronHack Project | Canvas Game
 
+![Screenshot](styles/images/R_U_N_Title_Screen_001.png)
+
 # R U N
 
 ## Description
@@ -8,36 +10,30 @@ R U N is a game where the player has to move a ball from left to right in order 
 
 ## Backlog
 
-- Add diagonal tiles.
-- Add jumping mechanic for the ball.
-- Increase speed of the upwards motion of the tiles as the game progresses.
+- Increase difficulty as the game progresses.
 
 ## Data Structure
 
-### main.js
+#### assets.js
+
+- class Ball
+- class Tile
+- class Gap
+
+#### audio.js
+
+#### tileGenerator.js
+
+#### moveBall.js
+
+#### detectCollision.js
+
+#### gameOver.js
+
+#### main.js
 
 - startGame() {}
 - gameInterval = setInterval() {}
-
-### ball.js
-
-- constructor
-- draw() {}
-
-### tiles.js
-
-- constructor
-- draw() {}
-
-### gap.js
-
-- constructor
-- draw() {}
-
-## Game States
-
-- Title Screen
-- Game Screen
 
 ## Links
 
@@ -52,4 +48,4 @@ R U N is a game where the player has to move a ball from left to right in order 
 
 ### Presentation
 
-[Slides]()
+[Slides](https://docs.google.com/presentation/d/1gabh3tL0dj5uhVbyFVrbhirQNom2Dldzw63KYOpNraM/edit?usp=sharing)

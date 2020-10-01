@@ -37,10 +37,6 @@ R U N is a game where the player has to move a ball from left to right in order 
 
 ## Links
 
-#### Trello
-
-[Trello](https://trello.com/b/h4hj6kRy)
-
 #### Repository and Deployment
 
 [Repository](https://github.com/SantAndresP/ironhack-canvas-game-project)

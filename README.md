@@ -36,12 +36,4 @@ R U N is a game where the player has to move a ball from left to right in order 
 - gameInterval = setInterval() {}
 
 ## Links
-
-#### Repository and Deployment
-
-[Repository](https://github.com/SantAndresP/ironhack-canvas-game-project)
-[Deployment](https://santandresp.github.io/ironhack-canvas-game-project/)
-
-#### Presentation
-
-[Slides](https://docs.google.com/presentation/d/1gabh3tL0dj5uhVbyFVrbhirQNom2Dldzw63KYOpNraM/edit?usp=sharing)
+[Repository](https://github.com/SantAndresP/ironhack-canvas-game-project) | [Deployment](https://santiagoardiles.github.io/run/) | [Slides](https://docs.google.com/presentation/d/1gabh3tL0dj5uhVbyFVrbhirQNom2Dldzw63KYOpNraM/edit?usp=sharing)

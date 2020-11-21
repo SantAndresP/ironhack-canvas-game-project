@@ -1,4 +1,4 @@
-/* Audio. */
+/*    Audio.    */
 
 // Files.
 const lonelyMountain = new Audio("styles/sounds/Lonely_Mountain.ogg");

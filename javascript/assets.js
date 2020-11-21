@@ -1,4 +1,4 @@
-/* Ball */
+/* Ball. */
 class Ball {
   constructor(x, y, radius, color) {
     this.x = x;
@@ -29,7 +29,7 @@ class Ball {
   }
 }
 
-/* Tile */
+/* Tile. */
 class Tile {
   constructor(x, y, width, height, color) {
     this.width = width;
@@ -51,7 +51,7 @@ class Tile {
   }
 }
 
-/* Gap */
+/* Gap. */
 class Gap {
   constructor(y, width, height) {
     this.width = width;

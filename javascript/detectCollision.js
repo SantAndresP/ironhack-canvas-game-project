@@ -10,7 +10,7 @@ function detectCollision() {
       ) {
         j++;
         ball.y++;
-        currentScore.innerText = j; // Increase Score
+        currentScore.innerText = j; // Increases score.
       } else if (
         ball.y < tiles[j].y - ball.radius &&
         ball.y <= canvas.height - ball.radius

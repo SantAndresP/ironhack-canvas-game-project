@@ -1,9 +1,11 @@
-/* Setup. */
+/* Main. */
+
+// Setup.
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 const background = (canvas.style.background = "Black");
 
-/* Assets.*/
+// Assets.
 const difficulty = 975;
 const yTile = canvas.height + 50;
 
@@ -15,12 +17,12 @@ const tiles = [initialTile];
 tiles[0].addGap(initialGap);
 let j = 0; // Index for the current tile.
 
-/* Score. */
-const currentScore = document.querySelector("#currentScore");
-
-/* Start button. */
+// Start button.
 let gameStarted = false;
 const startBtn = document.querySelector("#startBtn");
+
+// Score.
+const currentScore = document.querySelector("#currentScore");
 
 // Start the game by cliking.
 startBtn.addEventListener("click", () => {
@@ -31,18 +33,7 @@ startBtn.addEventListener("click", () => {
   gameStarted = true;
 });
 
-// Start the game by pressing enter.
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    startBtn.style.display = "none";
-    currentScore.style.display = "flex";
-    canvas.style.display = "flex";
-    currentSong.play();
-    gameStarted = true;
-  }
-});
-
-/* Ball direction detector. */
+// Ball direction detector.
 let rightArrow = false;
 let leftArrow = false;
 
@@ -56,7 +47,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-/* Main game function. */
+// Main game function.
 function startGame() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -71,7 +62,7 @@ function startGame() {
   ball.draw();
 }
 
-/* Main game interval. */
+// Main game interval.
 const gameInterval = setInterval(() => {
   if (gameStarted) {
     requestAnimationFrame(startGame);

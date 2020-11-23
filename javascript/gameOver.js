@@ -1,3 +1,5 @@
+/* Game over. */
+
 function gameOver() {
   const reloadBtn = document.querySelector("#reloadBtn");
   const endScreen = document.querySelector("#endScreen");

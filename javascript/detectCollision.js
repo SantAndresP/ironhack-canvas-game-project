@@ -1,3 +1,5 @@
+/* Collision detector. */
+
 function detectCollision() {
   if (ball.y < canvas.height - ball.radius) {
     if (j > tiles.length - 1) {
@@ -10,7 +12,7 @@ function detectCollision() {
       ) {
         j++;
         ball.y++;
-        currentScore.innerText = j; // Increases score.
+        currentScore.innerText = j; // Increases score when ball falls through the hole.
       } else if (
         ball.y < tiles[j].y - ball.radius &&
         ball.y <= canvas.height - ball.radius

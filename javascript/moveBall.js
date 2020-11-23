@@ -1,3 +1,5 @@
+/* Move ball. */
+
 function moveBall() {
   if (rightArrow && ball.x + ball.radius < canvas.width) {
     ball.moveRight();

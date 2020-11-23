@@ -1,4 +1,4 @@
-/* General */
+/* General. */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,7 @@ canvas {
   display: none;
 }
 
-/* Game */
+/* Game. */
 #startBtn {
   margin-top: 250px;
   width: 350px;
@@ -48,7 +48,7 @@ canvas {
   margin-top: 30px;
 }
 
-/* End Screen */
+/* End screen. */
 #endScreen {
   display: none;
   justify-content: center;
